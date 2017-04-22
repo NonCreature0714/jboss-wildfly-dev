@@ -55,10 +55,10 @@ You'll need to change them in order to setup your own accounts.
 
 ```bash
    $ docker run \
-   -e 'MGM_USER=your-manager-user-here' \
-   -e 'MGM_USER_PASSWORD=your-manager-user-password' \
-   -e 'APP_USER=your-app-user-here' \
-   -e 'APP_USER_PASSWORD=your-app-user-password' \
+   -e MGM_USER=your-manager-user-here \
+   -e MGM_USER_PASSWORD=your-manager-user-password \
+   -e APP_USER=your-app-user-here \
+   -e APP_USER_PASSWORD=your-app-user-password \
    -it \
    -p 8080:8080 \
    -p 9990:9990 \
