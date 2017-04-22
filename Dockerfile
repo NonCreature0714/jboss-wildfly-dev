@@ -4,8 +4,11 @@
 # Pull from officical jboss/wildlfy
 FROM jboss/wildfly
 
+LABEL maintainer.name="Bill Brubaker" \ 
+      maintainer.email="bill@pigonauts.com"
+
 # Define user environment variables
-ENV MANAGEMENT_USER manager-user
+ENV MANAGEMENT_USER management-user
 ENV MANAGEMENT_USER_PASSWORD Password123!!!
 ENV APP_USER app-user
 ENV APP_USER_PASSWORD Password123!!!
@@ -21,11 +24,11 @@ ENV APP_USER_PASSWORD Password123!!!
 ENV APP_ROOT 
 
 # Create management and application users
-# Then clear history so the passwords aren't exposed in history
+# Then clear history so the passwords aren't leaked in history
 RUN /opt/jboss/wildfly/bin/add-user.sh \
-	${MANAGEMENT_USER} ${MANAGEMENT_USER_PASSWORD} --silent \
+		${MANAGEMENT_USER} ${MANAGEMENT_USER_PASSWORD} --silent \
 	&& /opt/jboss/wildfly/bin/add-user.sh -a \
-	${APP_USER} ${APP_USER_PASSWORD} --silent \
+		${APP_USER} ${APP_USER_PASSWORD} --silent \
 	&& history -c 
 
 # Expose the app port and admin ports. 8080 is app, 9990 is admin
