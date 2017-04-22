@@ -31,7 +31,9 @@ RUN /opt/jboss/wildfly/bin/add-user.sh \
 		${APP_USER} ${APP_USER_PASSWORD} --silent \
 	&& history -c 
 
-# Expose the app port and admin ports. 8080 is app, 9990 is admin
+# Expose the app port and admin ports 
+#8080 is app 
+#9990 is admin
 EXPOSE 8080
 EXPOSE 9990
 
