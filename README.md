@@ -55,10 +55,10 @@ You'll need to change them in order to setup your own accounts.
 
 ```bash
    $ docker run -it \
-   -e MGM_USER="your_management_user_name" \
-   -e MGM_USER_PASSWORD="your_management_user_password" \
-   -e APP_USER="your_app_user_name" \
-   -e APP_USER_PASSWORD="your_app_user_password" \
+   -e "MGM_USER=your_management_user_name" \
+   -e "MGM_USER_PASSWORD=your_management_user_password" \
+   -e "APP_USER=your_app_user_name" \
+   -e "APP_USER_PASSWORD=your_app_user_password" \
    -p 8080:8080 -p 9990:9990 \
    -d -v ~/wildfly-app/:/opt/jboss/wildfly/standalone/deployments/ \
    noncreature0714/wildfly-dev-server
