@@ -62,6 +62,6 @@ You'll need to change them in order to setup your own accounts.
    -it \
    -p 8080:8080 \
    -p 9990:9990 \
-   -d -v ~/wildfly-app/:/opt/jboss/wildfly/standalone/deployments/ \
+   -v ~/wildfly-app/:/opt/jboss/wildfly/standalone/deployments/ \
    noncreature0714/wildfly-dev-server
 ```
