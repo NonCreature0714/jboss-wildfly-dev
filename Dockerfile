@@ -9,9 +9,9 @@ LABEL maintainer.name="Bill Brubaker" \
 
 # Define user environment variables
 ENV MGM_USER management-user
-ENV MGM_USER_PASSWORD Password123!!!
+ENV MGM_USER_PASSWORD Password123#
 ENV APP_USER app-user
-ENV APP_USER_PASSWORD Password123!!!
+ENV APP_USER_PASSWORD Password123#
 
 # Define application root location
 	# NOTE: Wildfly's default location for .war files is
