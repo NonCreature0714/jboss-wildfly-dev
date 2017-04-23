@@ -26,9 +26,9 @@ ENV APP_ROOT /opt/jboss/wildfly/standalone/deployments
 # Create management and application users
 # Then clear history so the passwords aren't leaked in history
 RUN /opt/jboss/wildfly/bin/add-user.sh \
-		$MGM_USER $MGM_USER_PASSWORD --silent \
+		"${MGM_USER}" "${MGM_USER_PASSWORD}" --silent \
 	&& /opt/jboss/wildfly/bin/add-user.sh -a \
-		$APP_USER $APP_USER_PASSWORD --silent \
+		"${APP_USER}" "${APP_USER_PASSWORD}" --silent \
 	&& history -c
 
 # Expose the app port and admin ports
