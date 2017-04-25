@@ -12,7 +12,7 @@ To test a Wildfly container can run on your localhost, run:
 
 ```bash
    $ docker run -it -p 8080:8080 -p 9990:9990 \
-   -d noncreature0714/wildfly-dev-server
+   noncreature0714/wildfly-dev-server
 ```
 
 You can then navigate to http://localhost:8080 for a welcome page.
@@ -34,7 +34,7 @@ placing a `.war` file into `~/wildfly-app` directory on your localhost.**
 
 ```bash
    $ docker run -it -p 8080:8080 -p 9990:9990 \
-   -d -v ~/wildfly-app/:/opt/jboss/wildfly/standalone/deployments/ \
+   -v ~/wildfly-app/:/opt/jboss/wildfly/standalone/deployments/ \
    noncreature0714/wildfly-dev-server
 ```
 
